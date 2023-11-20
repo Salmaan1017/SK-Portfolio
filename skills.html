@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salmaan - Skills</title>
+    <link rel="stylesheet" href="op.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black; 
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 12px;
+        z-index: 1;
+        text-align: left;
+        color: white; 
+    }
+
+        .dropdown button {
+            background-color: #87CEEB; 
+            color: black; 
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown button:hover {
+            background-color: #00BFFF; 
+        }
+
+        .dropdown-content ul {
+            color: black; 
+        }
+
+        .show {
+            display: block;
+        }
+
+        .creative-text {
+            font-family: 'Your Custom Font', sans-serif; 
+            font-style: italic;
+            font-size: 18px;
+            color: #e3e7eb;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body class="skills">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education & Work Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="skills">
+        <h1>Skills</h1>
+        <div class="creative-text"><i>[Click Below↓]</i></div>
+        <div class="dropdown">
+            <button onclick="toggleDropdown()">My Qualifications and Certifications</button>
+            <div class="dropdown-content">
+                <ul>
+                    <li>Computer Architecture</li>
+                    <li>Programming with Python</li>
+                    <li>Principle of Program Design</li>
+                    <li>Programming with HTML, CSS, JavaScript</li>
+                    <li>Robotic Development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Salmaan. All rights reserved.</p>
+    </footer>
+
+    <script src="op.js"></script>
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.classList.toggle('show');
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>
+
+
